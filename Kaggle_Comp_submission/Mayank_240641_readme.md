@@ -48,7 +48,7 @@ X_train = X_train.to_numpy().reshape(-1, 28, 28, 1) / 255  # Normalize values
 X_test = X_test.to_numpy().reshape(-1, 28, 28, 1) / 255    # Normalize values
 ```
 
-- One hot encoding the labels
+- One hot encoding the labels:
 
 ```python
 y_train = pd.get_dummies(y_train)
@@ -78,12 +78,12 @@ model.summary()
 model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])
 ```
 
-#### 5. Train the Model.
+#### 5. Train the Model
 ```python
 history = model.fit(X_train, y_train, epochs=20, batch_size=64, validation_data=(X_test, y_test))
 ```
 
-#### 6. Plotting accuracy metrics.
+#### 6. Plotting accuracy metrics
 
 ```python
 plt.plot(history.history['accuracy'], label='Training Accuracy')
@@ -95,7 +95,7 @@ plt.title('Model Training History')
 plt.show()
 ```
 
-#### 7. Making predictions using test data.
+#### 7. Making predictions using test data
 
 ```python
 test = pd.read_csv('test.csv')
@@ -105,7 +105,7 @@ labels = [0, 1, 2, 3, 4, 5, 6, 7, 8, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
 y_pred_labels = [labels[x] for x in Y_pred]
 ```
 
-#### 8. Creating submission file and downloading it.
+#### 8. Creating submission file and downloading it
 
 ```python
 submission = pd.DataFrame({'id': range(len(y_pred_labels)), 'label': y_pred_labels})
