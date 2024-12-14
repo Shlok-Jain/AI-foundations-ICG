@@ -1,10 +1,5 @@
 # README.md
 
-## Multi-Class Image Classification using TensorFlow in Google Colab
-
-This project demonstrates building, training, and evaluating a Convolutional Neural Network (CNN) for multi-class image classification using TensorFlow and Google Colab. Below are the instructions to set up and run the program.
-
-
 ### Steps to Run the program.
 
 #### 1. Upload Files
@@ -51,6 +46,11 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_
 ```python
 X_train = X_train.to_numpy().reshape(-1, 28, 28, 1) / 255  # Normalize values
 X_test = X_test.to_numpy().reshape(-1, 28, 28, 1) / 255    # Normalize values
+```
+
+- One hot encoding the labels
+
+```python
 y_train = pd.get_dummies(y_train)
 y_test = pd.get_dummies(y_test)
 ```
