@@ -1,13 +1,23 @@
-# AI-Foundations
+# FSx0: FingerSpelling classification
 
-Official repository for the Winter Project AI Foundations offered by ICG
+FSx0 can process samples of video captured from the webcam in real-time and output the respective english letter spelled in ASL format.
 
-**Project Objective** : To learn about AI programming techniques from the ground up, all the way till we evaluate our CNN model on the domain of sign language, possibly creating a live feed sign language detection model.
+![Finger spelling dictionary][letters.png]
 
+### Setup
 
+First install necessary libraries by running
+```
+pip install -r requirements.txt
+```
 
-### Segment 0
+### To run
 
-Revision of basic python, along with the three essential data science libraries numpy, pandas and matplotlib
+``` 
+cd FSx0
+ ```
 
-Rolled out Assignment 0, testing both the programming and the applicative aspect of using these libraries in data science.
+ To run the program, simply run main.py!
+``` 
+python main.py
+ ```
