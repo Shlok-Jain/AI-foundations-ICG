@@ -2,7 +2,7 @@
 
 FSx0 can process samples of video captured from the webcam in real-time and output the respective english letter spelled in ASL format.
 
-![Finger spelling dictionary][letters.png]
+![Finger spelling dictionary](letters.png)
 
 ### Setup
 
@@ -21,3 +21,5 @@ cd FSx0
 ``` 
 python main.py
  ```
+
+ Note, there is no end block encoded within, to exit you must delete the terminal FSx0 is running on.
