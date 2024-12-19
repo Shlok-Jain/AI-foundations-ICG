@@ -41,6 +41,6 @@ model_with_aug = tf.keras.models.Sequential([
 model_with_aug.compile('adam', loss=tf.keras.losses.categorical_crossentropy, metrics= ['accuracy'])
 
 def loadCNN():
-    model_with_aug.load_weights('CNN/my_checkpoint.weights.h5')
+    model_with_aug.load_weights('CNN\my_checkpoint.weights.h5')
     return model_with_aug
 
